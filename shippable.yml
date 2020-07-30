@@ -54,7 +54,7 @@ resources:
     type: image
     integration: dr-ecr
     pointer:
-      sourceName: "git-codecommit.us-east-2.amazonaws.com/v1/repos/deploy-ecs-basic"
+      sourceName: "919910997989.dkr.ecr.us-east-1.amazonaws.com/deploy-ecs-basic"
     seed:
       versionName: "latest"
 
