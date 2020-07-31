@@ -1,3 +1,4 @@
+
 # Language setting http://docs.shippable.com/ci/languages/node/
 language: node_js
 
@@ -35,11 +36,8 @@ build:
   # http://docs.shippable.com/ci/shippableyml/#post_ci
   post_ci:
     - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker build -t $ECR_REPO:$BRANCH.$BUILD_NUMBER .; fi'
- #   - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push $ECR_REPO:$BRANCH.$BUILD_NUMBER ; fi'
+    - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push $ECR_REPO:$BRANCH.$BUILD_NUMBER ; fi'
     - 'if [ $IS_PULL_REQUEST == "false" ] ; then shipctl post_resource_state deploy-ecs-basic-image versionName $BRANCH.$BUILD_NUMBER; fi'
-  
-  push:
-   - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push $ECR_REPO:$BRANCH.$BUILD_NUMBER ; fi'
   
 
 # Integrations are used to connect external resources to CI
