@@ -48,6 +48,7 @@ integrations:
   hub:
     - integrationName: dr-ecr
       type: amazonKeys
+      region: us-east-2
 
 
 resources:
