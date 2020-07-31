@@ -86,7 +86,7 @@ resources:
     integration: dr-aws
 #    pointer:
     versionTemplate:
-      sourceName : "deploy-ecs-basic" #name of the cluster to which we are deploying
+      sourceName : "deploy-ecs-basic-cluster" #name of the cluster to which we are deploying
       region: "us-east-2"
 
 
